@@ -48,7 +48,7 @@ Assemble the zip
 
 ## Amazon S3
 
-https://docs.aws.amazon.com/AWSRubySDK/latest/AWS/S3/S3Object.html#multipart_upload-instance_method
+https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Object.html#initiate_multipart_upload-instance_method
 
 Each interval, e.g. 50-100 files, save the current data into s3. When finished, use a Multipart Upload with
 `copy_part` to combine the parts into a whole.
