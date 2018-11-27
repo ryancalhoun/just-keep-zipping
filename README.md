@@ -78,12 +78,12 @@ into a whole (for more than 32 parts, iteratively compose the destination file a
 	zip = JustKeepZipping.new
 	zip.add 'file1.txt', 'Data to be zipped'
 
-	bucket.create_file zip, 'part_one'
+	bucket.create_file StringIO.new(zip.read), 'part_one'
 
 	zip.add 'file2.txt', 'More data to be zipped'
 	zip.close
 
-	bucket.create_file zip, 'part_two'
+	bucket.create_file StringIO.new(zip.read), 'part_two'
 
 	bucket.compose ['part_one', 'part_two'], 'archive.zip'
 
