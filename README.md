@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/just-keep-zipping.svg)](http://badge.fury.io/rb/just-keep-zipping)
+
 # just-keep-zipping
 
 Produce a ZIP file from many source files, in a streaming or distributed fashion.
@@ -72,7 +74,7 @@ Each interval, e.g. 50-100 files, save the current data into s3. When finished, 
 
 http://googleapis.github.io/google-cloud-ruby/docs/google-cloud-storage/latest/Google/Cloud/Storage/Bucket.html#compose-instance_method
 
-Each interval, e.g. 50-100 files, save the current data into s3. When finished, use the compose method to join the parts
+Each interval, e.g. 50-100 files, save the current data into GCS. When finished, use the compose method to join the parts
 into a whole (for more than 32 parts, iteratively compose the destination file as an input of the next group).
 
 	zip = JustKeepZipping.new
