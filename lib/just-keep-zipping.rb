@@ -46,6 +46,7 @@ class JustKeepZipping
       zip.write body.respond_to?(:read) ? body.read : body
     end
     io.rewind
+    io.set_encoding 'ASCII-8BIT'
     d = Zip::CentralDirectory.read_from_stream io
 
     e = d.entries.first

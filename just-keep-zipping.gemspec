@@ -1,6 +1,6 @@
 Gem::Specification.new {|s|
   s.name = 'just-keep-zipping'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.licenses = ['MIT']
   s.summary = 'Just Keep Zipping'
   s.description = 'Produce a zip archive from a large number of parts, in smaller batches.'
